@@ -22,7 +22,7 @@ def count_implementation(start: float = 0.0, step: float = 1.0) -> Generator[int
 
 if __name__ == '__main__':
     zero_to_100k = range(100_001)
-    count_gen = count_implementation(step=0.5)
+    count_gen = count_implementation(start=0, step=1)  # explicit.
     print(getsizeof(count_gen))  # 112 bytes.
     print(getsizeof([x for x in zero_to_100k]))  # ~0.824456 megabytes (depending on many factors).
 
